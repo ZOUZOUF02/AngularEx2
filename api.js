@@ -11,7 +11,7 @@ const travel = excelToJson({
     sourceFile: 'travel.xlsx'
 })
 const workbook = new ExcelJS.Workbook('travel');
-var c = 1
+app.use(express.static("public"))
 app.get('/GetServices', (req, res)=> {
     res.send(travel.services)
 })
@@ -43,4 +43,5 @@ app.post('/Contact',async function(req,res){
       });  
     res.send(travel)
   })
-app.listen(3000)
+  app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
