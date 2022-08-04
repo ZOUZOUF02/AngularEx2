@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   }
   GetServices()
   {
-    this.http.get('http://localhost:3000/GetServices').subscribe((json : any) =>{
+    this.http.get('https://travelapi04082022.herokuapp.com/GetServices').subscribe((json : any) =>{
       json.forEach((e : any) => {
         var s = new Service()
         s.title = e.A
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit{
   }
   GetGuides()
   {
-    this.http.get('http://localhost:3000/GetGuides').subscribe((json : any) =>{
+    this.http.get('https://travelapi04082022.herokuapp.com/GetGuides').subscribe((json : any) =>{
       json.forEach((e : any) => {
         var s = new Guide()
         s.name = e.A
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit{
   }
   GetTrips()
   {
-    this.http.get('http://localhost:3000/GetTrips').subscribe((json : any) =>{
+    this.http.get('https://travelapi04082022.herokuapp.com/GetTrips').subscribe((json : any) =>{
       json.forEach((e : any) => {
         var s = new Trip()
         s.name = e.A

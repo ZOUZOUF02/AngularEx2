@@ -21,6 +21,9 @@ app.get('/GetGuides', (req, res)=> {
 app.get('/GetTrips', (req, res)=> {
     res.send(travel.trips)
 })
+app.get('/GetGroups', (req, res)=> {
+    res.send(travel.groups)
+})
 app.post('/Contact',async function(req,res){
     console.log('body:' + req.body);
     var workbook = new ExcelJS.Workbook();   

@@ -21,7 +21,7 @@ grp : Group = new Group()
   Contact()
   {
     // console.log(this.grp)
-    this.http.post<any>('http://localhost:3000/Contact' , this.grp).subscribe(data => {
+    this.http.post<any>('https://travelapi04082022.herokuapp.com/Contact' , this.grp).subscribe(data => {
     })
   }
 }
